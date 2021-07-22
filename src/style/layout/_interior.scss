@@ -1,0 +1,93 @@
+.interior {
+
+  .background {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .description {
+    padding: 2rem;
+    background-color: rgba($white, .7);
+    width: 60rem;
+    height: 15rem;
+    position: absolute;
+    left: 14%;
+    bottom: 6%;
+    overflow: hidden;
+    transition: 1s all ease-in;
+    
+
+    &--open {
+      height: auto;
+    }
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--icon {
+      font-size: 2rem;
+      color: $primary-color;
+    }
+
+    &--info {
+      border: .1rem solid $black;
+      border-radius: 50%;
+      padding: .5rem .7rem;
+      position: absolute;
+      bottom: 7%;
+      left: 34%;
+      background-color: rgba(255,255,255,.3);
+    }
+
+    &--btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+
+    &--heading {
+      text-transform: uppercase;
+      margin-bottom: 1.3rem;
+    }
+
+    &--text {
+      font-size: 1.7rem;
+      margin-bottom: 2rem;
+    }
+
+    &--full {
+      position: absolute;
+      bottom: 0;
+      height: 5rem;
+      background: linear-gradient(rgba(255,255,255,.3) 0%, rgba(255,255,255,1) 100%);
+      width: 100%;
+      margin-left: -2rem;
+      border: none;
+      cursor: pointer;
+      color: $primary-color;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+
+      &__icon {
+        &--rotate {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

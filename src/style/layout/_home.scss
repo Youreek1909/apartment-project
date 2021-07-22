@@ -1,0 +1,45 @@
+.home {
+  padding: 8rem 30rem; 
+  
+  .intro {
+    margin-bottom: 2rem;
+    padding: 2rem 7rem;
+
+    &--heading {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    &--text {
+      font-size: 1.7rem;
+    }
+  }
+
+  .floors {
+    display: flex;
+    justify-content: space-between;
+    height: 25rem;
+    text-align: center;
+
+    &--left,
+    &--right {
+      height: 30rem;
+
+      & img {
+        height: 100%;
+        margin-bottom: 2rem; 
+      }
+    }
+
+    & button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:active,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

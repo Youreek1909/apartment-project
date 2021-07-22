@@ -1,0 +1,45 @@
+.configurator--form,
+.individual--checkbox {
+  
+  input[type="checkbox"].switch{
+    font-size: 30px;
+    appearance: none;
+    width: 2.2em;
+    height: 1.5em;
+    background: rgb(216, 216, 216);
+    border-radius: 3em;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: all .2s ease-in-out;
+    }
+    
+    input[type="checkbox"].switch:after{
+    position: absolute;
+    content: "";
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: rgb(126, 126, 126);
+    transform: scale(.75);
+    left: -1rem;
+    top: -.7rem;
+    transition: all .2s ease-in-out;
+    }
+    
+    input[type="checkbox"].switch:checked:after{
+    left: calc(100% - 1.7em);
+    background: $secondary-color;
+    }
+  
+    input[type="checkbox"].switch:checked:before{
+      content: url(../../images/icons/check.svg);
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      z-index: 10;
+    }
+}
+
+

@@ -1,0 +1,29 @@
+.btn--edit {
+  position: absolute;
+
+  &__floor {
+    bottom: 3rem; 
+    left: 25rem;
+  }
+
+  &__front {
+    top: 25%;
+    left: 50%;
+  }
+
+  &__back {
+    top: 45%;
+    left: 40%;
+  }
+
+  &__cover {
+    top: 57%;
+    left: 35%;
+  }
+
+  &__oven {
+    top: 40%;
+    right: 15%;
+  }
+
+}

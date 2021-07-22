@@ -1,0 +1,369 @@
+.summary {
+  padding: 10rem 15rem 0 15rem;
+
+  /////// INTERIOR ////////
+  &--interior {
+    & img {
+      width: 100%;
+      margin-bottom: 10rem;
+    }
+  }
+
+  //////// ROOMS /////////
+  &--rooms {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10rem;
+
+    .room-description {
+      .description--heading {
+        width: 35rem;
+        text-align: right;
+        margin-bottom: 4rem;
+
+        & h1 {
+          font-size: 5rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .description--list {
+        & ul {
+          list-style-type: none;
+
+          & li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: .1rem solid $secondary-color;
+            padding: 2rem 1rem;
+
+            & p {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //////// FLOOR ////////
+  &--floor {
+    margin-bottom: 7rem;
+
+    & img {
+      width: 100%;
+      margin-bottom: 5rem;
+    } 
+
+    .floor {
+      &--heading {
+        font-size: 4.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      &--options {
+        display: flex;
+
+        .format {
+          padding-left: 2rem;
+          width: 100%;
+
+          &--heading {
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+          }
+
+          &--wrapper {
+            display: flex;
+
+            .options {
+              display: flex;
+              justify-content: space-between;
+              width: 65%;
+              background-color: $light-grey;
+              padding: 2rem;
+              margin-top: 0;
+ 
+                .radio {
+                  width: 10%;
+        
+                  & button {
+                  width: 2rem;
+                  height: 2rem;
+                  border: .2rem solid rgb(185,185,185);
+                  border-radius: 50%;
+                  }  
+                } 
+              
+              .size {
+                & p {
+                  font-size: 2rem;
+                  font-weight: bold;
+                }
+              }
+            }
+
+            .price {
+              width: 35%;
+              background-color: #b9b9b9;
+              padding: 2rem;
+              
+              & p {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ///////// KITCHEN //////////
+  &--kitchen {
+    background-color: #f1f1f1;
+    margin-left: -15rem;
+    margin-right: -15rem;
+    padding: 10rem 15rem;
+
+    .kitchen {
+
+      &--heading {
+        font-size: 4.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      &--preview {
+        margin-bottom: 5rem;
+        
+        img {
+          width: 100%;
+        }
+      }
+
+      &--style {
+
+        .front,
+        .back,
+        .cover,
+        .oven,
+        .tap,
+        .bar {
+          width: 100%; 
+        }
+
+        .front,
+        .cover {
+          padding-right: 2rem;
+        }
+
+        .back,
+        .oven {
+          padding-left: 2rem;
+        }
+
+        .mb-5rem {
+          margin-bottom: 5rem;
+        }
+
+        .mb-3rem {
+          margin-bottom: 3rem;
+        }
+
+        .summary--options__wrapper {
+          position: relative;
+
+          .bar,
+          .tap {
+            background-color: $light-grey;
+            padding: 1rem;
+            font-size: 1.5rem;
+          }
+
+          .tap {
+            margin-right: 2rem;
+          }
+
+          .bar {
+            margin-left: 2rem;
+          }
+
+        }
+      }
+    }  
+  }
+
+  ///////// CONFIGURATOR ////////
+  &--configurator {
+    padding: 10rem 25rem;
+
+    .configurator {
+
+      &--header {
+        margin-bottom: 1.5rem;
+
+       & h1 {
+         font-size: 3rem;
+       } 
+      }
+
+      &--icon {
+        font-size: 3rem;
+        margin-right: 2rem;
+      }
+
+      &--form {
+        background-color: #bcf1f1;
+        border-top: .3rem solid $secondary-color;
+        text-align: center;
+        padding: 1.5rem ;
+
+        .information {
+          margin-bottom: 2rem;
+
+          & p {
+            font-size: 1.7rem;
+            line-height: 1.7;
+          }
+        }
+
+        & form {
+
+          & input {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            height: 5rem;
+            border: none;
+            border-bottom: .1rem solid $black;
+            margin-bottom: 2rem;
+            padding: 1rem 2rem;
+            font-size: 1.7rem;
+          }
+
+          .toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15rem;
+            margin-bottom: 2rem;
+
+            & p {
+              font-size: 1.7rem;
+              width: 50%;
+              margin-top: -1rem;
+            }
+
+            .switch {
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      &--btn {
+        padding: 0 18rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  ///////// FOOTER //////// 
+  &--footer {
+    background-color: $primary-color;
+    margin-right: -15rem;
+    margin-left: -15rem;
+    padding: 10rem 20rem;
+    color: $white;
+
+    .w-100 {
+      width: 100%;
+    }
+
+    .address--wrapper {
+      padding: 0 5rem;
+      & p {
+        font-size: 1.7rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .logo--wrapper {
+        padding-top: 4rem;
+      & img {
+        width: 100%;
+        filter: invert(100%);
+      }
+    }
+
+    .social--wrapper {
+      padding: 0 5rem;
+      font-size: 1.7rem;
+
+      .social {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+
+        &--icon {
+          margin-right: 1rem;
+        }
+      }
+
+      .information {
+        & p {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+////////  CARD /////////
+.summary--card {
+  width: 100%;
+  position: relative;
+  margin-top: 0;
+
+  & img {
+    width: 15rem;
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+
+  &__preview {
+    display: flex;
+    background-color: $light-grey;
+    padding: .5rem;
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    color: $black;
+  }
+
+  &__wrapper {
+    padding: .9rem;
+
+    .title {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .description {
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+  }
+}

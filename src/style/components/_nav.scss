@@ -1,0 +1,65 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  height: 4.5rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--home {
+    width: 100%;
+  }
+
+  &--openSidebar {
+    width: 72%; 
+  }
+
+  &--closeSidebar {
+    width: 97%;
+  }
+
+  &--openMenu {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  }
+
+
+  .logo {
+    height: 100%;
+    &--img {
+      height: 100%;
+    }
+  }
+
+  .pages {
+    & ul {
+      
+      & li {
+        list-style-type: none;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        
+        & a {
+          text-decoration: none;
+          color: inherit;
+          transition: color .3s ease;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .menu {
+    &--icon {
+      font-size: 1.7rem;
+      margin-right: 1rem;
+      text-decoration: none;
+      color: $black;
+      cursor: pointer;
+    }
+  }
+}

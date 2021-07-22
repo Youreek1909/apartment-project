@@ -1,0 +1,25 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+
+@import "components/app";
+@import "components/nav";
+@import "components/button";
+@import "components/sidebar";
+@import "components/interiorSidebar";
+@import "components/floorSidebar";
+@import "components/kitchenSidebar";
+@import "components/buttonEdit";
+@import "components/checkbox";
+
+@import "layout/home";
+@import "layout/interior";
+@import "layout/summary";
+@import "layout/floor";
+@import "layout/kitchen"; 
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');

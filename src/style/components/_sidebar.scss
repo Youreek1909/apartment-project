@@ -1,0 +1,82 @@
+.sidebar {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  transition: all 1s ease-out;
+
+  .toggle {
+    height: 100%;
+    width: 5rem;
+    background-color: $secondary-color;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    & p {
+      transform: rotate(-90deg) translate(-50%);
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: right;
+    }
+  }
+
+  .styles {
+    width: 35.3rem;
+    background-color: $white;
+    padding: 0 2rem;
+    position: relative;
+    overflow: scroll;
+
+    &--wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      &__name {
+        font-size: 2rem;
+        align-self: center;
+      }
+
+      &__price {
+        background-color: $light-grey;
+        padding: 1rem 2rem;
+        text-align: right;
+
+        & p {
+          font-size: 1.1rem;
+        }
+
+        & span {
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .btn--wrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 75.5%;
+    padding: .3rem;
+    display: flex;
+
+    & a:first-child {
+      width: 40%;
+    }
+
+    & a:last-child {
+      width: 60%;
+    }
+  }
+}

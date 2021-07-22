@@ -1,0 +1,146 @@
+.card {
+  margin-top: 2rem;
+  position: relative;
+  
+  &--btn {
+    width: 100%;
+    text-align: left;
+    position: relative;
+  }
+
+  &--heading {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: .6rem;
+
+    &__nr {
+      width: 3rem;
+      height: 3rem;
+      display: inline-flex;
+      background-color: $light-grey;
+      margin-left: 2rem;
+      border-radius: 50%;
+    }
+
+    & span {
+      margin-left: 1rem;
+      margin-top: .5rem;
+    }
+  }
+
+  &--wrapper {
+    display: flex;
+    height: 9rem;
+    padding: .5rem;
+    background-color: $light-grey;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+
+    & img {
+      height: 100%;
+      width: 10rem;
+    }
+
+    &__text {
+      padding: .9rem;
+
+      .title {
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.btn--box {
+  position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 75.5%;
+    padding: .3rem;
+    z-index: 2;
+
+  .btn--kitchen {
+    width: 50%;
+    padding: 1.5rem 3rem;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    height: 4.5rem;
+
+    &__back {
+      background-color: $secondary-color;
+    }
+
+    &__next {
+      background-color: $primary-color;
+    }
+  }
+
+  .btn--icon {
+    font-size: 2rem;
+    margin-bottom: -.5rem;
+
+    &__right {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.options {
+  margin-top: 2.5rem;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  &--heading {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: .6rem;
+  }
+
+  &--icon {
+    font-size: 2rem;
+  }
+
+  &--wrapper {
+    
+    .tap,
+    .bar {
+      background-color: $light-grey;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+
+      & p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .bar {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.individual {
+
+  &--wrapper {
+    margin-top: 2rem;
+  }
+
+  &--heading {
+    font-size: 1.7rem;
+  }
+
+}

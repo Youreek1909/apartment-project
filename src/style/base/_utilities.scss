@@ -1,0 +1,15 @@
+ button {
+   outline: none;
+   cursor: pointer;
+   border: none;
+   background-color: transparent;
+   font-family: 'Montserrat', sans-serif;
+ }
+
+.row {
+  display: flex;
+}
+
+.sp-btw {
+  justify-content: space-between;
+}

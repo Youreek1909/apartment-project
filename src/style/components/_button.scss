@@ -1,0 +1,39 @@
+  .btn {
+    padding: 1.5rem 3rem;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 4.5rem;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &--back {
+      background-color: $secondary-color;
+    }
+  
+    &--icon {
+      margin-right: 1.5rem;
+
+      &__check {
+        margin-bottom: -.2rem;
+      }
+
+      &__back {
+        font-size: 2rem;
+        margin-bottom: -.5rem;
+      }
+    }
+  
+    &--home {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20%;
+    }
+  }
