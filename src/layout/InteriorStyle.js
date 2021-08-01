@@ -8,11 +8,7 @@ import InteriorSidebar from '../components/InteriorSidebar'
 export default function InteriorStyle() {
   const style = useSelector(state => state.style);
   const sidebar = useSelector(state => state.sidebar);
-  const [desc, setDesc] = React.useState(true);
-
-  const closeDescription = () => {
-    document.querySelector('.description').style.display = 'none'
-  }
+  const [description, setDescription] = React.useState(true);
 
   const toggleDescription = () => {
     document.querySelector('.description').classList.toggle('description--open')
@@ -27,12 +23,12 @@ export default function InteriorStyle() {
           className="background"
           src={style.content}
           alt="Background" />
-        {desc ?
+        {description ?
           <div className="description">
             <div className="description--wrapper">
               <h1 className="description--heading">{style.name}</h1>
               <button
-                onClick={() => setDesc(false)}
+                onClick={() => setDescription(false)}
                 className="description--btn">
                 <FaTimes className="description--icon" />
               </button>
@@ -44,7 +40,7 @@ export default function InteriorStyle() {
               <FaChevronUp className="description--full__icon" />
             </button>
           </div>
-          : <button className="description--info" onClick={() => setDesc(true)}>
+          : <button className="description--info" onClick={() => setDescription(true)}>
             <FaInfo />
           </button>
         }

@@ -16,10 +16,10 @@ export default function FloorStyle() {
     <React.Fragment>
       <Nav page={sidebar ? "nav--openSidebar" : "nav--closeSidebar"} />
       <div className="floor">
-        <img className="background" src={floor.content} alt={floor.name} />
+        <img className="background" src={floor.content} alt='' />
         <button className="btn--edit btn--edit__floor"
           onClick={() => !sidebar ? dispatch(toggleSidebar()) : null}>
-          <img src={icon} />
+          <img src={icon} alt='' />
         </button>
       </div>
       <Sidebar

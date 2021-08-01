@@ -56,10 +56,9 @@ export const changeKitchenOven = (nr) => {
   }
 }
 
-export const changeKitchenBackground = (nr) => {
+export const changeKitchenBackground = () => {
   return {
-    type: `KITCHEN_BACKGROUND`,
-    payload: nr
+    type: `KITCHEN_BACKGROUND`
   }
 }
 

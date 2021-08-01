@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import Nav from '../components/Nav'
 import { FaPen } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -11,8 +11,6 @@ import logo from '../images/logo.png'
 
 export default function Summary() {
   const style = useSelector(state => state.style);
-  const kitchen = useSelector(state => state.kitchen); //remove after
-  const dispatch = useDispatch; // remove after
 
   return (
     <div className="summary">
@@ -119,7 +117,6 @@ function Floor() {
 
 function Kitchen() {
   const kitchen = useSelector(state => state.kitchen);
-  const dispatch = useDispatch;
 
   return (
     <div className="summary--kitchen">
@@ -193,7 +190,6 @@ function Kitchen() {
 
 
 function Card({ heading, preview, title, description, link }) {
-  const dispatch = useDispatch;
 
   return (
     <div className="summary--card">

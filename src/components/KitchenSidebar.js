@@ -150,7 +150,7 @@ function Card({ name, nr, preview, title, description, myStyle }) {
             </div>
           </div>
           <div className={`card--wrapper ${myStyle}`}>
-            <img src={preview} alt='Image' />
+            <img src={preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{title}</p>
               <p className="description">{description}</p>
@@ -175,24 +175,12 @@ function FrontList() {
           </div>
           <button className="card--btn"
             onClick={() => {
-              dispatch(changeKitchenFront(0))
-              if (kitchen.back.id === 0 && kitchen.cover.id === 0) {
-                dispatch(changeKitchenBackground(0))
-              } else if (kitchen.back.id === 0 && kitchen.cover.id === 1) {
-                dispatch(changeKitchenBackground(6))
-              } else if (kitchen.back.id === 0 && kitchen.cover.id === 2) {
-                dispatch(changeKitchenBackground(7))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 0) {
-                dispatch(changeKitchenBackground(3))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 1) {
-                dispatch(changeKitchenBackground(12))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 2) {
-                dispatch(changeKitchenBackground(13))
-              }
+              dispatch(changeKitchenFront(0));
+              dispatch(changeKitchenBackground());
             }}>
             <div className={`card--wrapper ${kitchen.front.id === 0 ? "check--active" : ''}`}
               style={kitchen.front.id === 0 ? { backgroundColor: '#7AD1D1' } : null}>
-              <img src={kitchenFront[0].preview} alt="image" />
+              <img src={kitchenFront[0].preview} alt='' />
               <div className="card--wrapper__text">
                 <p className="title">{kitchenFront[0].title}</p>
                 <p className="description">{kitchenFront[0].description}</p>
@@ -201,24 +189,12 @@ function FrontList() {
           </button>
           <button className="card--btn"
             onClick={() => {
-              dispatch(changeKitchenFront(1))
-              if (kitchen.back.id === 0 && kitchen.cover.id === 0) {
-                dispatch(changeKitchenBackground(1))
-              } else if (kitchen.back.id === 0 && kitchen.cover.id === 1) {
-                dispatch(changeKitchenBackground(8))
-              } else if (kitchen.back.id === 0 && kitchen.cover.id === 2) {
-                dispatch(changeKitchenBackground(9))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 0) {
-                dispatch(changeKitchenBackground(4))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 1) {
-                dispatch(changeKitchenBackground(14))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 2) {
-                dispatch(changeKitchenBackground(15))
-              }
+              dispatch(changeKitchenFront(1));
+              dispatch(changeKitchenBackground());
             }}>
             <div className={`card--wrapper ${kitchen.front.id === 1 ? "check--active" : ''}`}
               style={kitchen.front.id === 1 ? { backgroundColor: '#7AD1D1' } : null}>
-              <img src={kitchenFront[1].preview} alt="image" />
+              <img src={kitchenFront[1].preview} alt='' />
               <div className="card--wrapper__text">
                 <p className="title">{kitchenFront[1].title}</p>
                 <p className="description">{kitchenFront[1].description}</p>
@@ -227,24 +203,12 @@ function FrontList() {
           </button>
           <button className="card--btn"
             onClick={() => {
-              dispatch(changeKitchenFront(2))
-              if (kitchen.back.id === 0 && kitchen.cover.id === 0) {
-                dispatch(changeKitchenBackground(2))
-              } else if (kitchen.back.id === 0 && kitchen.cover.id === 1) {
-                dispatch(changeKitchenBackground(10))
-              } else if (kitchen.back.id === 0 && kitchen.cover.id === 2) {
-                dispatch(changeKitchenBackground(11))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 0) {
-                dispatch(changeKitchenBackground(5))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 1) {
-                dispatch(changeKitchenBackground(16))
-              } else if (kitchen.back.id === 1 && kitchen.cover.id === 2) {
-                dispatch(changeKitchenBackground(17))
-              }
+              dispatch(changeKitchenFront(2));
+              dispatch(changeKitchenBackground());
             }}>
             <div className={`card--wrapper ${kitchen.front.id === 2 ? "check--active" : ''}`}
               style={kitchen.front.id === 2 ? { backgroundColor: '#7AD1D1' } : null}>
-              <img src={kitchenFront[2].preview} alt="image" />
+              <img src={kitchenFront[2].preview} alt='' />
               <div className="card--wrapper__text">
                 <p className="title">{kitchenFront[2].title}</p>
                 <p className="description">{kitchenFront[2].description}</p>
@@ -281,29 +245,11 @@ function BackList() {
         <button className="card--btn"
           onClick={() => {
             dispatch(changeKitchenBack(0));
-            if (kitchen.front.id === 0 && kitchen.cover.id === 0) {
-              dispatch(changeKitchenBackground(0))
-            } else if (kitchen.front.id === 0 && kitchen.cover.id === 1) {
-              dispatch(changeKitchenBackground(6))
-            } else if (kitchen.front.id === 0 && kitchen.cover.id === 2) {
-              dispatch(changeKitchenBackground(7))
-            } else if (kitchen.front.id === 1 && kitchen.cover.id === 0) {
-              dispatch(changeKitchenBackground(1))
-            } else if (kitchen.front.id === 1 && kitchen.cover.id === 1) {
-              dispatch(changeKitchenBackground(8))
-            } else if (kitchen.front.id === 1 && kitchen.cover.id === 2) {
-              dispatch(changeKitchenBackground(9))
-            } else if (kitchen.front.id === 2 && kitchen.cover.id === 0) {
-              dispatch(changeKitchenBackground(2))
-            } else if (kitchen.front.id === 2 && kitchen.cover.id === 1) {
-              dispatch(changeKitchenBackground(10))
-            } else if (kitchen.front.id === 2 && kitchen.cover.id === 2) {
-              dispatch(changeKitchenBackground(11))
-            }
+            dispatch(changeKitchenBackground());
           }}>
           <div className={`card--wrapper ${kitchen.back.id === 0 ? "check--active" : ''}`}
             style={kitchen.back.id === 0 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenBack[0].preview} alt="image" />
+            <img src={kitchenBack[0].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenBack[0].title}</p>
               <p className="description">{kitchenBack[0].description}</p>
@@ -313,30 +259,12 @@ function BackList() {
         <button className="card--btn"
           onClick={() => {
             dispatch(changeKitchenBack(1));
-            if (kitchen.front.id === 0 && kitchen.cover.id === 0) {
-              dispatch(changeKitchenBackground(3))
-            } else if (kitchen.front.id === 0 && kitchen.cover.id === 1) {
-              dispatch(changeKitchenBackground(12))
-            } else if (kitchen.front.id === 0 && kitchen.cover.id === 2) {
-              dispatch(changeKitchenBackground(13))
-            } else if (kitchen.front.id === 1 && kitchen.cover.id === 0) {
-              dispatch(changeKitchenBackground(4))
-            } else if (kitchen.front.id === 1 && kitchen.cover.id === 1) {
-              dispatch(changeKitchenBackground(14))
-            } else if (kitchen.front.id === 1 && kitchen.cover.id === 2) {
-              dispatch(changeKitchenBackground(15))
-            } else if (kitchen.front.id === 2 && kitchen.cover.id === 0) {
-              dispatch(changeKitchenBackground(5))
-            } else if (kitchen.front.id === 2 && kitchen.cover.id === 1) {
-              dispatch(changeKitchenBackground(16))
-            } else if (kitchen.front.id === 2 && kitchen.cover.id === 2) {
-              dispatch(changeKitchenBackground(17))
-            }
+            dispatch(changeKitchenBackground());
           }
           }>
           <div className={`card--wrapper ${kitchen.back.id === 1 ? "check--active" : ''}`}
             style={kitchen.back.id === 1 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenBack[1].preview} alt="image" />
+            <img src={kitchenBack[1].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenBack[1].title}</p>
               <p className="description">{kitchenBack[1].description}</p>
@@ -373,23 +301,11 @@ function CoverList() {
         <button className="card--btn"
           onClick={() => {
             dispatch(changeKitchenCover(0));
-            if (kitchen.front.id === 0 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(0))
-            } else if (kitchen.front.id === 0 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(3))
-            } else if (kitchen.front.id === 1 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(1))
-            } else if (kitchen.front.id === 1 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(4))
-            } else if (kitchen.front.id === 2 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(2))
-            } else if (kitchen.front.id === 2 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(5))
-            }
+            dispatch(changeKitchenBackground());
           }}>
           <div className={`card--wrapper ${kitchen.cover.id === 0 ? "check--active" : ''}`}
             style={kitchen.cover.id === 0 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenCover[0].preview} alt="image" />
+            <img src={kitchenCover[0].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenCover[0].title}</p>
               <p className="description">{kitchenCover[0].description}</p>
@@ -399,23 +315,11 @@ function CoverList() {
         <button className="card--btn"
           onClick={() => {
             dispatch(changeKitchenCover(1));
-            if (kitchen.front.id === 0 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(6))
-            } else if (kitchen.front.id === 0 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(12))
-            } else if (kitchen.front.id === 1 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(8))
-            } else if (kitchen.front.id === 1 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(14))
-            } else if (kitchen.front.id === 2 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(10))
-            } else if (kitchen.front.id === 2 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(16))
-            }
+            dispatch(changeKitchenBackground());
           }}>
           <div className={`card--wrapper ${kitchen.cover.id === 1 ? "check--active" : ''}`}
             style={kitchen.cover.id === 1 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenCover[1].preview} alt="image" />
+            <img src={kitchenCover[1].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenCover[1].title}</p>
               <p className="description">{kitchenCover[1].description}</p>
@@ -425,23 +329,11 @@ function CoverList() {
         <button className="card--btn"
           onClick={() => {
             dispatch(changeKitchenCover(2));
-            if (kitchen.front.id === 0 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(7))
-            } else if (kitchen.front.id === 0 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(13))
-            } else if (kitchen.front.id === 1 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(9))
-            } else if (kitchen.front.id === 1 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(15))
-            } else if (kitchen.front.id === 2 && kitchen.back.id === 0) {
-              dispatch(changeKitchenBackground(11))
-            } else if (kitchen.front.id === 2 && kitchen.back.id === 1) {
-              dispatch(changeKitchenBackground(17))
-            }
+            dispatch(changeKitchenBackground());
           }}>
           <div className={`card--wrapper ${kitchen.cover.id === 2 ? "check--active" : ''}`}
             style={kitchen.cover.id === 2 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenCover[2].preview} alt="image" />
+            <img src={kitchenCover[2].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenCover[2].title}</p>
               <p className="description">{kitchenCover[2].description}</p>
@@ -481,7 +373,7 @@ function OvenList() {
           }}>
           <div className={`card--wrapper ${kitchen.oven.id === 0 ? "check--active" : ''}`}
             style={kitchen.oven.id === 0 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenOven[0].preview} alt="image" />
+            <img src={kitchenOven[0].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenOven[0].title}</p>
               <p className="description">{kitchenOven[0].description}</p>
@@ -492,7 +384,7 @@ function OvenList() {
           onClick={() => dispatch(changeKitchenOven(1))}>
           <div className={`card--wrapper ${kitchen.oven.id === 1 ? "check--active" : ''}`}
             style={kitchen.oven.id === 1 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenOven[1].preview} alt="image" />
+            <img src={kitchenOven[1].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenOven[1].title}</p>
               <p className="description">{kitchenOven[1].description}</p>
@@ -567,7 +459,7 @@ function TapList() {
           }}>
           <div className={`card--wrapper ${kitchen.tap.id === 0 ? "check--active" : ''}`}
             style={kitchen.tap.id === 0 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenTap[0].preview} alt="image" />
+            <img src={kitchenTap[0].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenTap[0].title}</p>
               <p className="description">{kitchenTap[0].description}</p>
@@ -578,7 +470,7 @@ function TapList() {
           onClick={() => dispatch(changeKitchenTap(1))}>
           <div className={`card--wrapper ${kitchen.tap.id === 1 ? "check--active" : ''}`}
             style={kitchen.tap.id === 1 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenTap[1].preview} alt="image" />
+            <img src={kitchenTap[1].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenTap[1].title}</p>
               <p className="description">{kitchenTap[1].description}</p>
@@ -604,7 +496,7 @@ function BarList() {
           }}>
           <div className={`card--wrapper ${kitchen.bar.id === 0 ? "check--active" : ''}`}
             style={kitchen.bar.id === 0 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenBar[0].preview} alt="image" />
+            <img src={kitchenBar[0].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenBar[0].title}</p>
               <p className="description">{kitchenBar[0].description}</p>
@@ -615,7 +507,7 @@ function BarList() {
           onClick={() => dispatch(changeKitchenBar(1))}>
           <div className={`card--wrapper ${kitchen.bar.id === 1 ? "check--active" : ''}`}
             style={kitchen.bar.id === 1 ? { backgroundColor: '#7AD1D1' } : null}>
-            <img src={kitchenBar[1].preview} alt="image" />
+            <img src={kitchenBar[1].preview} alt='' />
             <div className="card--wrapper__text">
               <p className="title">{kitchenBar[1].title}</p>
               <p className="description">{kitchenBar[1].description}</p>

@@ -30,10 +30,20 @@
     }
   
     &--home {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
       width: 20%;
+      margin: 0 auto;
+      display: block;
+
+      @include respond(laptop-md) {
+        width: 25%;
+      }
+
+      @include respond(tablet) {
+        width: 30%;
+      }
+
+      @include respond(phone-lg) {
+        width: 40%;
+      }
     }
   }

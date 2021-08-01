@@ -30,85 +30,31 @@ import kitchen_bar_0 from '../images/kitchen/appliances/griffloss.png'
 import kitchen_bar_1 from '../images/kitchen/appliances/griffleiste.png'
 import kitchen_tap_0 from '../images/kitchen/appliances/tap_blanco.png'
 import kitchen_tap_1 from '../images/kitchen/appliances/tap_kwc.png'
-import kitchen_individual from '../images/icons/noStyle.svg'
+//import kitchen_individual from '../images/icons/noStyle.svg'
 
 const kitchenData = [
   {
     kitchen: [
       {
         background: [
-          {
-            id: 0,
-            preview: kitchen_000
-          },
-          {
-            id: 1,
-            preview: kitchen_100
-          },
-          {
-            id: 2,
-            preview: kitchen_200
-          },
-          {
-            id: 3,
-            preview: kitchen_010
-          },
-          {
-            id: 4,
-            preview: kitchen_110
-          },
-          {
-            id: 5,
-            preview: kitchen_210
-          },
-          {
-            id: 6,
-            preview: kitchen_001
-          },
-          {
-            id: 7,
-            preview: kitchen_002
-          },
-          {
-            id: 8,
-            preview: kitchen_101
-          },
-          {
-            id: 9,
-            preview: kitchen_102
-          },
-          {
-            id: 10,
-            preview: kitchen_201
-          },
-          {
-            id: 11,
-            preview: kitchen_202
-          },
-          {
-            id: 12,
-            preview: kitchen_011
-          },
-          {
-            id: 13,
-            preview: kitchen_012
-          },
-          {
-            id: 14,
-            preview: kitchen_111
-          },
-          {
-            id: 15,
-            preview: kitchen_112
-          },
-          {
-            id: 16,
-            preview: kitchen_211
-          },
-          {
-            id: 17,
-            preview: kitchen_212
-          },
+          kitchen_000,
+          kitchen_100,
+          kitchen_200,
+          kitchen_010,
+          kitchen_110,
+          kitchen_210,
+          kitchen_001,
+          kitchen_002,
+          kitchen_101,
+          kitchen_102,
+          kitchen_201,
+          kitchen_202,
+          kitchen_011,
+          kitchen_012,
+          kitchen_111,
+          kitchen_112,
+          kitchen_211,
+          kitchen_212
         ]
       },
       {

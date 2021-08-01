@@ -9,10 +9,6 @@ export default function InteriorSidebar() {
   const style = useSelector(state => state.style);
   const dispatch = useDispatch();
 
-  const openDescription = () => {
-    document.querySelector('.description').style.display = 'block'
-  }
-
   return (
     <React.Fragment>
       <ul>
@@ -22,7 +18,6 @@ export default function InteriorSidebar() {
             <button
               style={style.content === el.content ? { outline: '.4rem solid #7AD1D1' } : null}
               onClick={() => {
-                //openDescription();
                 dispatch(changeStyle(el.id));
                 dispatch(changeFloor(el.id));
               }}>

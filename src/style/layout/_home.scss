@@ -1,9 +1,25 @@
 .home {
-  padding: 8rem 30rem; 
+  padding: 6rem 30rem 4rem 30rem; 
+
+  @include respond(laptop-md) {
+    padding: 6rem 20rem 4rem 20rem;
+  }
+
+  @include respond(tablet) {
+    padding: 8rem 10rem 6rem 10rem;
+  }
+
+  @include respond(phone-lg) {
+    padding: 8rem 5rem 6rem 5rem;
+  }
   
   .intro {
     margin-bottom: 2rem;
     padding: 2rem 7rem;
+
+    @include respond(laptop-md) {
+      padding: 1.5rem 5rem;
+    }
 
     &--heading {
       margin-bottom: 2rem;
@@ -15,31 +31,24 @@
     }
   }
 
-  .floors {
-    display: flex;
-    justify-content: space-between;
-    height: 25rem;
-    text-align: center;
+  .floor {
+    height: 30rem;
+    margin-bottom: 3rem;
 
-    &--left,
-    &--right {
-      height: 30rem;
-
-      & img {
-        height: 100%;
-        margin-bottom: 2rem; 
-      }
+    @include respond(laptop-md) {
+      height: 25rem;
     }
 
-    & button {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
+    @include respond(tablet) {
+      height: 20rem;
+    }
 
-      &:active,
-      &:focus {
-        outline: none;
-      }
+    & img {
+      height: 100%;
+    }
+
+    &--choice {
+      justify-content: space-around;
     }
   }
 }
